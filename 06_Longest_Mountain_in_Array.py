@@ -1,11 +1,12 @@
 # https://leetcode.com/problems/longest-mountain-in-array/description/
 
+# Other possible approaches: Dynamic Programming, Enumeration
+# 1. Two pointer
 # Time Complexity: O(n)
 # Space Complexity: O(1)
 from typing import List
 class Solution:
     def longestMountain(self, arr: List[int]) -> int:
-        # Two pointer
         N=len(arr)
 
         base,res=0,0
@@ -24,3 +25,4 @@ class Solution:
                     res=max(end-base+1,res)
             base=max(end,base+1)
         return res
+    
