@@ -1,8 +1,9 @@
 # https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/description/
 
 # 1. Priority Queue , heap
+# BEST
 # Time Complexity : O(nlogk)
-# Space Complexity : O(n)
+# Space Complexity : O(k)
 from typing import List
 import heapq
 class Solution:
@@ -10,13 +11,15 @@ class Solution:
         if k==len(nums):
             return nums
 
-        max_heap=[(num,i) for i,num in enumerate(nums)]
-        heapq.heapify(max_heap)
+        min_heap=[]
+        for i,val in enumerate(nums):
+            heapq.heappush(min_heap,(val,i))
+            if len(min_heap)>k:
+                heapq.heappop(min_heap)
 
-        top_k=heapq.nlargest(k,max_heap)
-        top_k.sort(key=lambda x:x[1])
-
+        top_k=sorted(min_heap,key=lambda x:x[1])
         return [num for num,i in top_k]
+
     
 
 # 2. Sorting , dictionary
