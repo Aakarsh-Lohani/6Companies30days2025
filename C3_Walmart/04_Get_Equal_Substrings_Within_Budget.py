@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/get-equal-substrings-within-budget/description/
 
+# Sliding Window
 # Time Complexity : O(n)
 # Space Complexity : O(1)
 class Solution:
