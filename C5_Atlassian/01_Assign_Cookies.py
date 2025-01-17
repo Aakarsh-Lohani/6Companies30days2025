@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/assign-cookies/description/
 
 
-# Time Complexity: O(n⋅logn+m⋅logm)
+# Time Complexity: O(nlogn+mlogm)
 # Space Complexity: O(m+n) # Tim sort in Python
 from typing import List
 class Solution:
