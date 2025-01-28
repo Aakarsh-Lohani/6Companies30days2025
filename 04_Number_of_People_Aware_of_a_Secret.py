@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/number-of-people-aware-of-a-secret/description/
+# https://leetcode.com/problems/number-of-people-aware-of-a-secret/solutions/6341384/python-using-dp-ton-son-by-aakarsh-lohan-3uro/
 
 # Time Complexity : O(n)
 # Space Complexity : O(n)
